@@ -5,4 +5,5 @@ $snoopy=new Snoopy();
 
 $url = 'https://coinmarketcap.com/';
 $content = file_get_contents_https($url);
-print_r($content);
+$url1 = getSonString($content, '<a class="currency-name-container" href="', '\"');
+print_r($url1);
