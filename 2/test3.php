@@ -14,7 +14,14 @@ $watchers = getSonString($content, '/watchers', '/a>');
 $watchers = getSonString($watchers, '>', '<');
 $watchers = trim($watchers);
 $watchers = str_replace(',', '', $watchers);
-print_r($watchers);die;
+
+$commits = getSonString($content, '/watchers', '/a>');
+$commits = getSonString($commits, '>', '<');
+$commits = trim($commits);
+$commits = str_replace(',', '', $commits);
+print_r($commits);die;
+
+
 $stargazers = getSonString($content, '/stargazers', '/a>');
 $stargazers = getSonString($stargazers, '>', '<');
 $stargazers = trim($stargazers);
