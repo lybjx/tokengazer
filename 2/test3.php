@@ -35,7 +35,7 @@ $contributors = getSonString($contributors, '<span class="num text-emphasized">'
 $contributors = trim($contributors);
 $contributors = str_replace(',', '', $contributors);
 
-$treeurl=$url."tree-commit".getSonString($content,"/tree-commit","\"");
+$treeurl=$url."/tree-commit".getSonString($content,"/tree-commit","\"");
 print_r($treeurl);die;
 
 
