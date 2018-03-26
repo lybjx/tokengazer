@@ -5,7 +5,7 @@ if(isset($_GET['p'])){
 $p=$_GET['p'];
 }
 else{
-$p=1;
+$p='';
 }
 $url = 'https://coinmarketcap.com/'.$p;
 $content = file_get_contents_https($url);
