@@ -25,7 +25,7 @@ $branches = getSonString($commits, '<span class="num text-emphasized">', '</span
 $branches = trim($branches);
 $branches = str_replace(',', '', $branches);
 
-$releases = getSonString($content, '<li class="releases">', '/li>');
+$releases = getSonString($content, '/releases">', '/a>');
 $releases = getSonString($releases, '<span class="num text-emphasized">', '</span>');
 $releases = trim($releases);
 $releases = str_replace(',', '', $releases);
