@@ -15,7 +15,7 @@ $watchers = getSonString($watchers, '>', '<');
 $watchers = trim($watchers);
 $watchers = str_replace(',', '', $watchers);
 
-$commits = getSonString($content, '/watchers', '/a>');
+$commits = getSonString($content, '/commits', '/a>');
 $commits = getSonString($commits, '>', '<');
 $commits = trim($commits);
 $commits = str_replace(',', '', $commits);
