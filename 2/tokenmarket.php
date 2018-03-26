@@ -9,7 +9,7 @@ $pages= ceil($counts/20);
 //for($i=0;$i<$pages;$i++){
 $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets?batch_num=0&batch_size=".$counts);
     $str=explode("<tbody>",$contents)[1];
-$str=explode("</tbody>",$contents)[0];
+$str=explode("</tbody>",$str)[0];
     
     print_r($str);
 die;
