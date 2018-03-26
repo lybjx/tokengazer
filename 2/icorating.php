@@ -13,6 +13,8 @@ $end1 = '</tbody>';
 $str1 = getSonString($content, $head1, $end1);
 $str1 = getSonString($str1, '<tbody>', '</tbody>');
 print_r($str1);
+$str2=explode('<td>',$str1);
+print_r($str2);
 
 $head2 = '<h2>Unassessed</h2>';
 $end2 = '</tbody>';
