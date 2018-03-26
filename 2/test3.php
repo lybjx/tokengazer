@@ -29,6 +29,11 @@ $releases = getSonString($content, '/releases">', '/a>');
 $releases = getSonString($releases, '<span class="num text-emphasized">', '</span>');
 $releases = trim($releases);
 $releases = str_replace(',', '', $releases);
+
+$contributors = getSonString($content, '/contributors">', '/a>');
+$contributors = getSonString($contributors, '<span class="num text-emphasized">', '</span>');
+$contributors = trim($contributors);
+$contributors = str_replace(',', '', $contributors);
 print_r($releases);die;
 
 
