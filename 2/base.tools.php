@@ -24,6 +24,7 @@ function getSonStrings($parent,$start,$end) {
     $a2[$k] = explode("\">", $a1[$k]);
         $a3[$k]=$a2[$k][0];
     }
+    unset($a3[0]);
     return $a3;
 }
 
