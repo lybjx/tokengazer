@@ -17,7 +17,7 @@ $str2=explode('<td>',$str1);
 print_r($str2);die;
 foreach($str2 as $k=>$v){
     if($k==0||$k%2==0){
-echo $url=explode("'>",trim(str_replace("'>'",'',str_replace("<tr data-href='",'',$str2[$k]))))[0];
+echo $url=getSonString("<tr data-href='",'',$str2[$k]);
     }
 }
 $head2 = '<h2>Unassessed</h2>';
