@@ -19,7 +19,9 @@ function getSonString($parent,$start,$end) {
 }
 function getSonStrings($parent,$start,$end) {
     $a1 = explode($start, $parent);
-    $a2 = explode($end, $a1);
+    foreach($a1 as $k=>$v){
+    $a2[$k] = explode($end, $a1[$k]);
+    }
     return $a2;
 }
 
