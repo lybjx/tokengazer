@@ -8,7 +8,6 @@ $url = 'https://github.com/ethereum/go-ethereum';
 //$url = $_GET['url'];
 $snoopy->fetch($url);
 $content = file_get_contents_https($url);
-var_dump($content);
 
 $str = getSonString($content, '<ul class="numbers-summary">', '</ul>');
 
