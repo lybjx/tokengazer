@@ -16,7 +16,7 @@ $str1 = getSonString($str1, '<tbody>', '</tbody>');
 $str2=explode('<td>',$str1);
 //print_r($str2);
 foreach($str2 as $k=>$v){
-echo $url=trim(str_replace("'>'",'',str_replace("<tr data-href='",'',$str2[$k][0])));
+echo $url=trim(str_replace("'>'",'',str_replace("<tr data-href='",'',$str2[$k])));
 }
 $head2 = '<h2>Unassessed</h2>';
 $end2 = '</tbody>';
