@@ -19,8 +19,8 @@ function getSonString($parent,$start,$end) {
 }
 function getSonStrings($parent,$start,$end) {
     $a1 = explode($start, $parent);
-    
-    return $a1;
+    $a2 = explode($end, $a1[1]);
+    return $a2;
 }
 
 function getSonString2($parent,$start,$end) {
