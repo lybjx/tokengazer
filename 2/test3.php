@@ -9,12 +9,12 @@ $snoopy->fetch($url);
 $content = file_get_contents_https($url);
 
 $str = getSonString($content, '<ul class="numbers-summary">', '</ul>');
-print_r($str);die;
+
 $watchers = getSonString($content, '/watchers', '/a>');
 $watchers = getSonString($watchers, '>', '<');
 $watchers = trim($watchers);
 $watchers = str_replace(',', '', $watchers);
-
+print_r($watchers);die;
 $stargazers = getSonString($content, '/stargazers', '/a>');
 $stargazers = getSonString($stargazers, '>', '<');
 $stargazers = trim($stargazers);
