@@ -7,4 +7,4 @@ $url = 'https://coinmarketcap.com/';
 $content = file_get_contents_https($url);
 $content=getSonString($content,"<tbody>","</tbody>");
 $url1 = getSonStrings($content, '<a class="currency-name-container" href="','\"');
-var_dump($url1);
+print_r($url1);
