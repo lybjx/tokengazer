@@ -1,7 +1,6 @@
 <?php
 include('bootstraps.php');
 include('snoopy.php');
-phpinfo();
 $snoopy=new Snoopy();
 
 $url = 'https://github.com/ethereum/go-ethereum';
