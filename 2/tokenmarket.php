@@ -11,8 +11,9 @@ $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets
     $str=explode("<td class=\"col-asset-name\">",$contents);
     foreach($str as $k=>$v){
     $tmp=explode("<a href=\"",$str[$k]);
-        print_r($tmp);
+        //print_r($tmp);
     }
+    print_r($str);
 die;
 }
 $str = getSonString($content, '<div class="table-responsive compact-name-column">', '<div class="pull-right');
