@@ -17,6 +17,9 @@ $str2=explode('<td>',$str1);
 $i=0;
 //print_r($str2);die;
 foreach($str2 as $k=>$v){
+    if($k==0||$k%2==0){
+    print_r($str2[$k]);
+    }
     if($k==0||$k%2==0){continue;
 $url=getSonString($str2[$k],"<tr data-href='","'>",$str2[$k]);
         $con1=file_get_contents_https($url);
@@ -25,9 +28,7 @@ $url=getSonString($str2[$k],"<tr data-href='","'>",$str2[$k]);
         $arr[$i]['githuburl']="https://github.com/".$str4;
     
     }
-    if($k==0||$k%2==0){
-    print_r($str2[$k]);
-    }
+    
 }
 $head2 = '<h2>Unassessed</h2>';
 $end2 = '</tbody>';
