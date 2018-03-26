@@ -36,7 +36,9 @@ $contributors = trim($contributors);
 $contributors = str_replace(',', '', $contributors);
 
 $treeurl=$url."/tree-commit".getSonString($content,"/tree-commit","\"");
-print_r($treeurl);die;
+$lastcommittime=file_get_contents_https($treeurl);
+$lastcommittime=getSonString($lastcommittime,"<relative-time datetime=\"","\"");
+print_r($lastcommittime);die;
 
 
 $stargazers = getSonString($content, '/stargazers', '/a>');
