@@ -15,7 +15,10 @@ unset($tmp[0]);
 	foreach($tmp as $k=>$v){
         $tmp1=$tmp[$k];
         $url=explode('<a href="',$tmp1);
-        echo $url=explode('"',$url[1])[0];
+        $url=explode('"',$url[1])[0];
+        $tmp2=file_get_contents_https($url);
+        $githuburl=explode("https://github.com/",$tmp2)[1];
+        $githuburl="https://github.com/".explode("\"",$githuburl)[0];
     }
     print_r($tmp);
 die;
