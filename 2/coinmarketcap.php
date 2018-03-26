@@ -51,4 +51,3 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $i++;
 }*/
 print_r($githuburl);
-foreach 
