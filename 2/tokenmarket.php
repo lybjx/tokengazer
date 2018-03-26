@@ -10,8 +10,13 @@ $pages= ceil($counts/20);
 $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets?batch_num=0&batch_size=".$counts);
     $str=explode("<tbody>",$contents)[1];
 $str=explode("</tbody>",$str)[0];
-    
-    print_r($str);
+    $tmp=explode("<td class=\"col-asset-name\">",$str);
+	foreach($tmp as $k=>$v){
+        $tmp1=$tmp[$k][1];
+        $url=explode('<a href="',$tmp1);
+        echo $url=explode('"',$url[1])[0];
+    }
+    //print_r($str);
 die;
 //}
 $str = getSonString($content, '<div class="table-responsive compact-name-column">', '<div class="pull-right');
@@ -22,7 +27,7 @@ $rowList = explode('</tr>', $str);
 $resList = array();
 foreach ($rowList as $row) {
 	$colList = explode('</td>', $row);
-	$row = array();
+	$row = array()
 	foreach ($colList as $col) {
 		// var_dump($col);
 		$colvalue = trim(getSonString2($col, '>', '<'));
