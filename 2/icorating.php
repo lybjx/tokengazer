@@ -19,7 +19,7 @@ $i=0;
 foreach($str2 as $k=>$v){
     if($k==0||$k%2==0){
         echo $str2[$k];
-    echo $name=getSonString($str2[$k],"\" />","</td>");
+    echo $name=explode("</td",$str2[$k])[0];
     }
     if($k==0||$k%2==0){/*continue;
 $url=getSonString($str2[$k],"<tr data-href='","'>",$str2[$k]);
