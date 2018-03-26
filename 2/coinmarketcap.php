@@ -1,7 +1,6 @@
 <?php
 include('bootstraps.php');
-include('snoopy.php');
-$snoopy=new Snoopy();
+
 if(isset($_GET['p'])){
 $p=$_GET['p'];
 }
