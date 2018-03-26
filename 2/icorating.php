@@ -25,7 +25,7 @@ $url=getSonString($str2[$k],"<tr data-href='","'>",$str2[$k]);
         $arr[$i]['githuburl']="https://github.com/".$str4;
     
     }
-    else{
+    if($k==0||$k%2==0){
     print_r($str2[$k]);
     }
 }
