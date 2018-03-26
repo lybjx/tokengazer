@@ -5,7 +5,7 @@ $url = 'https://tokenmarket.net/blockchain/all-assets';
 $content = file_get_contents($url);
 $counts=explode("<small>Showing <strong>",$content)[1];
 $counts=explode("</strong> assets</small>",$counts)[0];
-echo $counts;die;
+echo ($count/20+1);die;
 $str = getSonString($content, '<div class="table-responsive compact-name-column">', '<div class="pull-right');
 $str = getSonString($str, '<tbody>', '</tbody>');
 // echo $str;
