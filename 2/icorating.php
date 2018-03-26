@@ -18,6 +18,7 @@ $i=0;
 //print_r($str2);die;
 foreach($str2 as $k=>$v){
     if($k==0||$k%2==0){
+        echo $str2[$k];
     echo $name=getSonString($str2[$k],"\" />","</td>");
     }
     if($k==0||$k%2==0){/*continue;
