@@ -10,7 +10,7 @@ $snoopy->fetch($url);
 $content = file_get_contents_https($url);
 
 $str = getSonString($content, '<ul class="numbers-summary">', '</ul>');
-
+print_r($str);die;
 $watchers = getSonString($content, '/watchers', '/a>');
 $watchers = getSonString($watchers, '>', '<');
 $watchers = trim($watchers);
