@@ -16,5 +16,5 @@ $str=explode("</tbody>",$str)[0];
         $url=explode('<a href="',$tmp1);
         echo $url=explode('"',$url[1])[0];
     }
-    //print_r($str);
+    print_r($tmp);
 die;
