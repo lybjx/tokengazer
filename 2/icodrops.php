@@ -12,4 +12,3 @@ foreach($str2 as $k=>$v){
     echo $githuburl="https://github.com/".explode("\"",explode("https://github.com/",$contents1)[1])[0];
     
 }
-print_r($str2);
