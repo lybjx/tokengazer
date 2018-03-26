@@ -19,12 +19,11 @@ $end2 = '</tbody>';
 $str3 = getSonString($content, $head2, $end2);
 $str3 = getSonString($str3, '<tbody>', '</tbody>');
 array_push($str2,$str3);
-print_r($str2);die;
 $i=0;
 //print_r($str2);die;
 foreach($str2 as $k=>$v){
     if($k==0||$k%2==0){
-    echo $name=trim(explode("</td",$str2[$k])[0]);
+    $name=trim(explode("</td",$str2[$k])[0]);
         if(strstr($name,"'>"))
         {
             $arr[$i]['name']=$name=explode(">",$name)[1];
@@ -37,7 +36,3 @@ foreach($str2 as $k=>$v){
     
     } 
 }
-$head2 = '<h2>Unassessed</h2>';
-$end2 = '</tbody>';
-$str2 = getSonString($content, $head2, $end2);
-$str2 = getSonString($str2, '<tbody>', '</tbody>');
