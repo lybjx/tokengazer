@@ -19,7 +19,7 @@ function getSonString($parent,$start,$end) {
 }
 function getSonStrings($parent,$start,$end) {
     $a1 = explode($start, $parent);
-    $a2 = explode($end, $a1[1]);
+    $a2 = explode($end, $a1);
     return $a2;
 }
 
