@@ -13,7 +13,7 @@ $str=explode("</tbody>",$str)[0];
     $tmp=explode("<td class=\"col-asset-name\">",$str);
 unset($tmp[0]);
 	foreach($tmp as $k=>$v){
-        $tmp1=$tmp[$k][1];
+        $tmp1=$tmp[$k];
         $url=explode('<a href="',$tmp1);
         echo $url=explode('"',$url[1])[0];
     }
