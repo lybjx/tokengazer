@@ -35,7 +35,7 @@ foreach($str2 as $k=>$v){
         $str4=explode("\"",$str3)[0];
         $arr[$i]['githuburl']="https://github.com/".$str4;
     
-    
+    } 
 }
 $head2 = '<h2>Unassessed</h2>';
 $end2 = '</tbody>';
