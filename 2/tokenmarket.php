@@ -3,7 +3,7 @@ include('bootstraps.php');
 
 $url = 'https://tokenmarket.net/blockchain/all-assets';
 $content = file_get_contents($url);
-$counts=explode("<small>Showing <strong>",$contents)[1];
+$counts=explode("<small>Showing <strong>",$content)[1];
 $counts=explode("</strong> assets</small>",$counts)[0];
 echo $counts;die;
 $str = getSonString($content, '<div class="table-responsive compact-name-column">', '<div class="pull-right');
