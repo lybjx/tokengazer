@@ -18,7 +18,8 @@ foreach($url1 as $k=>$v){
 $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $arr[$i]['name']=explode("/",$url1[$k])[2];
     $arr[$i]['githuburl']=$githuburl[$i]=getSonString($contents1,'<span class="glyphicon glyphicon-hdd text-gray" title="Source Code"></span> <a href="','"');
-    $kv->set('products:'.$i, $url1[$kk]);
+    $kv->add('products:'.$i, $arr[$kk]);
+    
     echo $kv->get('products:'.$i);
     $i++;
 }
