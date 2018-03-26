@@ -45,4 +45,4 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $githuburl[$i]=getSonString($contents1,'<span class="glyphicon glyphicon-hdd text-gray" title="Source Code"></span> <a href="','"');
     $i++;
 }*/
-print_r($content);
+print_r($content.$url);
