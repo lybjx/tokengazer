@@ -34,7 +34,7 @@ $contributors = getSonString($content, '/contributors">', '/a>');
 $contributors = getSonString($contributors, '<span class="num text-emphasized">', '</span>');
 $contributors = trim($contributors);
 $contributors = str_replace(',', '', $contributors);
-print_r($releases);die;
+print_r($contributors);die;
 
 
 $stargazers = getSonString($content, '/stargazers', '/a>');
