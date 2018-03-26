@@ -21,12 +21,13 @@ foreach($str2 as $k=>$v){
         echo $str2[$k];
     //echo $name=getSonString($str2[$k],">","</td>");
     }die;
-    if($k==0||$k%2==0){continue;
+    if($k==0||$k%2==0){/*continue;
 $url=getSonString($str2[$k],"<tr data-href='","'>",$str2[$k]);
         $con1=file_get_contents_https($url);
         $str3=explode("github.com/",$con1)[1];
         $str4=explode("\"",$str3)[0];
         $arr[$i]['githuburl']="https://github.com/".$str4;
+        */
     
     }
     
