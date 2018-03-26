@@ -22,7 +22,7 @@ $commits = str_replace(',', '', $commits);
 
 $branches = getSonString($content, '<li class="branches">', '/li>');
 $branches = getSonString($commits, '<span class="num text-emphasized">', '</span>');
-$branches = trim($commits);
+$branches = trim($branches);
 $branches = str_replace(',', '', $branches);
 print_r($branches);die;
 
