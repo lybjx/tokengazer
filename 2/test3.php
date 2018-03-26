@@ -34,7 +34,9 @@ $contributors = getSonString($content, '/contributors">', '/a>');
 $contributors = getSonString($contributors, '<span class="num text-emphasized">', '</span>');
 $contributors = trim($contributors);
 $contributors = str_replace(',', '', $contributors);
-print_r($contributors);die;
+
+$treeurl=$url.getSonString($content,"/tree-commit","\"");
+print_r($treeurl);die;
 
 
 $stargazers = getSonString($content, '/stargazers', '/a>');
