@@ -5,7 +5,16 @@ $url = 'https://tokenmarket.net/blockchain/all-assets';
 $content = file_get_contents($url);
 $counts=explode("<small>Showing <strong>",$content)[1];
 $counts=explode("</strong> assets</small>",$counts)[0];
-echo ceil($counts/20);die;
+$pages= ceil($counts/20);
+for($i=0;$i<$pages;$i++){
+$contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets?batch_num=".$i."&batch_size=20");
+    $str=explode("<td class=\"col-asset-name\">",$contents);
+    foreach($str as $k=>$v){
+    $tmp=explode("<a href=\"",$str[$k]);
+        print_r($tmp);
+    }
+die;
+}
 $str = getSonString($content, '<div class="table-responsive compact-name-column">', '<div class="pull-right');
 $str = getSonString($str, '<tbody>', '</tbody>');
 // echo $str;
