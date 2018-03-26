@@ -15,8 +15,8 @@ $watchers = getSonString($watchers, '>', '<');
 $watchers = trim($watchers);
 $watchers = str_replace(',', '', $watchers);
 
-$commits = getSonString($content, '/commits', '/a>');
-$commits = getSonString($commits, '>', '<');
+$commits = getSonString($content, '<li class="commits">', '/li>');
+$commits = getSonString($commits, '<span class="num text-emphasized">', '</span>');
 $commits = trim($commits);
 $commits = str_replace(',', '', $commits);
 print_r($commits);die;
