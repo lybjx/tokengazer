@@ -24,7 +24,12 @@ $branches = getSonString($content, '<li class="branches">', '/li>');
 $branches = getSonString($commits, '<span class="num text-emphasized">', '</span>');
 $branches = trim($branches);
 $branches = str_replace(',', '', $branches);
-print_r($branches);die;
+
+$releases = getSonString($content, '<li class="releases">', '/li>');
+$releases = getSonString($releases, '<span class="num text-emphasized">', '</span>');
+$releases = trim($releases);
+$releases = str_replace(',', '', $releases);
+print_r($releases);die;
 
 
 $stargazers = getSonString($content, '/stargazers', '/a>');
