@@ -17,39 +17,14 @@ require_once dirname(__FILE__) . '/extension/PHPExcel/Classes/PHPExcel.php';
 $objPHPExcel = new PHPExcel();
 $file_name='saestor://files/upload/info.xls';
 $objPHPExcel=PHPExcel_IOFactory::load($file_name);
-
-// Set document properties
-$objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
-							 ->setLastModifiedBy("Maarten Balliauw")
-							 ->setTitle("Office 2007 XLSX Test Document")
-							 ->setSubject("Office 2007 XLSX Test Document")
-							 ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
-							 ->setKeywords("office 2007 openxml php")
-							 ->setCategory("Test result file");
-
-
-// Add some data
-$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Hello')
-            ->setCellValue('B2', 'world!')
-            ->setCellValue('C1', 'Hello')
-            ->setCellValue('D2', 'world!');
-
-// Miscellaneous glyphs, UTF-8
-$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A4', 'Miscellaneous glyphs')
-            ->setCellValue('A5', 'éàèùâêîôûëïüÿäöüç');
-
-// Rename worksheet
-$objPHPExcel->getActiveSheet()->setTitle('Simple');
-
-
-// Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);
-
-
-// Redirect output to a client’s web browser (Excel2007)
- $objWriter=new PHPExcel_Writer_Excel5($objPHPExcel);
+$row=$objPHPExcel->getActiveSheet()->getHighestRow()+1;
+$objPHPExcel->getActiveSheet()->SetCellValue('A'.$row,1);
+$objPHPExcel->getActiveSheet()->SetCellValue('B'.$row,2);
+$objPHPExcel->getActiveSheet()->SetCellValue('C'.$row,3);
+$objPHPExcel->getActiveSheet()->SetCellValue('D'.$row,4);
+$objPHPExcel->getActiveSheet()->SetCellValue('E'.$row,5);
+$objWriter=newPHPExcel_Writer_Excel5($objPHPExcel);
 echo $objWriter->save('saestor://upload/info.xls');
 exit;
 
