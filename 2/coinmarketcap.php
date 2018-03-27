@@ -23,7 +23,7 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $arr[$i]['githuburl']=$githuburl[$i]=getSonString($contents1,'<span class="glyphicon glyphicon-hdd text-gray" title="Source Code"></span> <a href="','"');
     $kv->add('products:'.$i, json_encode($arr[$i],true));
     
-    $kv->get('products:'.$i);
+    echo $kv->get('products:'.$i);
     $i++;
 }
 
