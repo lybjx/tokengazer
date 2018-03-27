@@ -34,5 +34,5 @@ unset($tmp[0]);$i=0;
        
         $i++;
     }
-   print_r($data); 
+   
 die;
