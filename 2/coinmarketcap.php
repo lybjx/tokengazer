@@ -23,11 +23,10 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $arr[$i]['githuburl']=$githuburl[$i]=getSonString($contents1,'<span class="glyphicon glyphicon-hdd text-gray" title="Source Code"></span> <a href="','"');
     $kv->add('products:'.$i, json_encode($arr[$i],true));
     
-    echo $kv->get('products:'.$i);
+    $kv->get('products:'.$i);
     $i++;
 }
 
-print_r($arr);
 // 初始化SaeKV对象
 //访问授权应用的数据
 
