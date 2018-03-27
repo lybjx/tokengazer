@@ -6,6 +6,9 @@ $content = file_get_contents($url);
 $counts=explode("<small>Showing <strong>",$content)[1];
 $counts=explode("</strong> assets</small>",$counts)[0];
 $pages= ceil($counts/20);
+$kv = new SaeKV();
+$ret = $kv->init("xowlw2kmk2");
+
 //for($i=0;$i<$pages;$i++){
 $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets?batch_num=0&batch_size=".$counts);
     $str=explode("<tbody>",$contents)[1];
@@ -21,6 +24,10 @@ unset($tmp[0]);
         $url=explode('"',$url[1])[0];
         $tmp2=file_get_contents_https($url);
         $githuburl=explode("https://github.com/",$tmp2)[1];
+        $ret = $kv->delete('products:'.$i,);
+        $kv->add('products:'.$i, json_encode($arr[$i],true));
+    
+    echo $kv->get('products:'.$i);
         if($githuburl!=''){
         $data[$k]['githuburl']=$githuburl="https://github.com/".explode("\"",$githuburl)[0].',';
         }
