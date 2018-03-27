@@ -14,7 +14,7 @@ $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets
     $str=explode("<tbody>",$contents)[1];
 $str=explode("</tbody>",$str)[0];
     $tmp=explode("<td class=\"col-asset-name\">",$str);
-unset($tmp[0]);$i=0;
+unset($tmp[0]);$i=1;
 	foreach($tmp as $k=>$v){
         $tmp1=$tmp[$k];
         $url=explode('<a href="',$tmp1);
