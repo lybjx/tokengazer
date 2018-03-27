@@ -16,6 +16,9 @@ print_r($tmp);
 	foreach($tmp as $k=>$v){
         $tmp1=$tmp[$k];
         $url=explode('<a href="',$tmp1);
+        $name=explode('">',$tmp1)[1];
+        $name=time(explode('</a',$name)[0]);
+        $data[$k]['name']=$name;
         $url=explode('"',$url[1])[0];
         $tmp2=file_get_contents_https($url);
         $githuburl=explode("https://github.com/",$tmp2)[1];
