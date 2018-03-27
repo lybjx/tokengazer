@@ -24,7 +24,7 @@ $objPHPExcel->getActiveSheet()->SetCellValue('B'.$row,2);
 $objPHPExcel->getActiveSheet()->SetCellValue('C'.$row,3);
 $objPHPExcel->getActiveSheet()->SetCellValue('D'.$row,4);
 $objPHPExcel->getActiveSheet()->SetCellValue('E'.$row,5);
-$objWriter=newPHPExcel_Writer_Excel5($objPHPExcel);
+$objWriter=new PHPExcel_Writer_Excel5($objPHPExcel);
 echo $objWriter->save('saestor://upload/info.xls');
 exit;
 
