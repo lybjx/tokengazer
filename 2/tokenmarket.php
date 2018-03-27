@@ -12,7 +12,6 @@ $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets
 $str=explode("</tbody>",$str)[0];
     $tmp=explode("<td class=\"col-asset-name\">",$str);
 unset($tmp[0]);
-print_r($tmp);
 	foreach($tmp as $k=>$v){
         $tmp1=$tmp[$k];
         $url=explode('<a href="',$tmp1);
@@ -26,5 +25,5 @@ print_r($tmp);
         $data[$k]['githuburl']=$githuburl="https://github.com/".explode("\"",$githuburl)[0].',';
         }
     }
-    
+   print_r($data); 
 die;
