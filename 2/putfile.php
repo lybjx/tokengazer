@@ -15,6 +15,8 @@ require_once dirname(__FILE__) . '/extension/PHPExcel/Classes/PHPExcel.php';
 
 // Create new PHPExcel object
 $objPHPExcel = new PHPExcel();
+$file_name='saestor://files/Files/info.xls';
+$objPHPExcel=PHPExcel_IOFactory::load($file_name);
 
 // Set document properties
 $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
