@@ -230,7 +230,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
     {
         // Check if file exists
         if (!file_exists($pFilename) || !is_readable($pFilename)) {
-            throw new PHPExcel_Reader_Exception("Could not open " . $pFilename . " for reading! File does not exist.");
+            //throw new PHPExcel_Reader_Exception("Could not open " . $pFilename . " for reading! File does not exist.");
         }
 
         // Open file
