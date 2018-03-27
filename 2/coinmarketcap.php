@@ -30,6 +30,7 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $i++;
 }
 $page=$p+1;
+echo $p;
 if($p==8){
 return false;
 }
