@@ -278,9 +278,9 @@ class PHPExcel_IOFactory
             //    Ignore our original guess, we know that won't work
             if ($autoResolveClass !== $extensionType) {
                 $reader = self::createReader($autoResolveClass);
-                if ($reader->canRead($pFilename)) {
+                //if ($reader->canRead($pFilename)) {
                     return $reader;
-                }
+                //}
             }
         }
 
