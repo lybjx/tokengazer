@@ -11,7 +11,7 @@ if (PHP_SAPI == 'cli')
 	die('This example should only be run from a Web Browser');
 
 /** Include PHPExcel */
-require_once dirname(__FILE__) . '/extension//Classes/PHPExcel.php';
+require_once dirname(__FILE__) . '/extension/PHPExcel/Classes/PHPExcel.php';
 
 
 // Create new PHPExcel object
@@ -61,7 +61,7 @@ header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
 header ('Pragma: public'); // HTTP/1.0
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-$objWriter->save('php://output');
+$objWriter->save('saestor://upload/info.xls');
 exit;
 
 ?>
