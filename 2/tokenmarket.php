@@ -30,9 +30,13 @@ unset($tmp[0]);$i=0;
         $ret = $kv->delete('tokenmarketproducts:'.$i);
         $kv->add('tokenmarketproducts:'.$i, json_encode($data[$i],true));
     
-    echo $kv->get('tokenmarketproducts:'.$i);
+    //echo $kv->get('tokenmarketproducts:'.$i);
        
         $i++;
     }
-   
+   $ret = $kv->delete('tokenmarketproducts:all');
+        $kv->add('tokenmarketproducts:', json_encode($data,true));
+    
+    echo $kv->get('tokenmarketproducts:');
+       
 die;
