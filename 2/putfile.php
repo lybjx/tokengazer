@@ -1,7 +1,6 @@
 <?php
 use sinacloud\sae\Storage as Storage;
 $storage = new Storage();
-print_r($storage->listBuckets(false));
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
@@ -49,7 +48,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 
 // Redirect output to a client’s web browser (Excel2007)
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-$objWriter->save();
+echo $objWriter->save();
 exit;
 
 ?>
