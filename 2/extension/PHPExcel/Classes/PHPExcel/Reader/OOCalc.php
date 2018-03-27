@@ -62,7 +62,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
     {
         // Check if file exists
         if (!file_exists($pFilename)) {
-            throw new PHPExcel_Reader_Exception("Could not open " . $pFilename . " for reading! File does not exist.");
+            //throw new PHPExcel_Reader_Exception("Could not open " . $pFilename . " for reading! File does not exist.");
         }
 
         $zipClass = PHPExcel_Settings::getZipClass();
