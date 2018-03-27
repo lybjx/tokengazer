@@ -24,13 +24,14 @@ unset($tmp[0]);$i=0;
         $url=explode('"',$url[1])[0];
         $tmp2=file_get_contents_https($url);
         $githuburl=explode("https://github.com/",$tmp2)[1];
-        $ret = $kv->delete('tokenmarketproducts:'.$i);
-        $kv->add('tokenmarketproducts:'.$i, json_encode($arr[$i],true));
-    
-    echo $kv->get('tokenmarketproducts:'.$i);
-        if($githuburl!=''){
+         if($githuburl!=''){
         $data[$k]['githuburl']=$githuburl="https://github.com/".explode("\"",$githuburl)[0].',';
         }
+        $ret = $kv->delete('tokenmarketproducts:'.$i);
+        $kv->add('tokenmarketproducts:'.$i, json_encode($data[$i],true));
+    
+    echo $kv->get('tokenmarketproducts:'.$i);
+       
         $i++;
     }
    print_r($data); 
