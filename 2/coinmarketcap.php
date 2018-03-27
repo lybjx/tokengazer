@@ -10,7 +10,7 @@ $p='';
 $kv = new SaeKV();
 $ret = $kv->init("xowlw2kmk2");
 
-$url = 'https://coinmarketcap.com/'.$p;
+$url = 'https://coinmarketcap.com/all';
 $content = file_get_contents_https($url);
 $content=getSonString($content,"<tbody>","</tbody>");
 $url1 = getSonStrings($content, '<span class="currency-symbol"><a href="','">');
