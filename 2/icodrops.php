@@ -14,7 +14,7 @@ foreach($str2 as $k=>$v){
     $arr[$i]['githhuburl']=$githuburl="https://github.com/".explode("\"",explode("https://github.com/",$contents1)[1])[0];
     $i++;
 }
-
+/*
 $url = 'https://icodrops.com/category/upcoming-ico/';
 $content = file_get_contents_https($url);
 $str1 = trim(getSonString($content, "<h3 class=\"col-md-12 col-12 not_rated\">All</h3>", "<div class=\"tabs__content\">"));
@@ -39,3 +39,4 @@ foreach($str2 as $k=>$v){
     $arr[$i]['githhuburl']=$githuburl="https://github.com/".explode("\"",explode("https://github.com/",$contents1)[1])[0];
     $i++;
 }
+*/
