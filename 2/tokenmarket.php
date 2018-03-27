@@ -12,6 +12,7 @@ $contents=file_get_contents_https("https://tokenmarket.net/blockchain/all-assets
 $str=explode("</tbody>",$str)[0];
     $tmp=explode("<td class=\"col-asset-name\">",$str);
 unset($tmp[0]);
+print_r($tmp);
 	foreach($tmp as $k=>$v){
         $tmp1=$tmp[$k];
         $url=explode('<a href="',$tmp1);
@@ -19,7 +20,7 @@ unset($tmp[0]);
         $tmp2=file_get_contents_https($url);
         $githuburl=explode("https://github.com/",$tmp2)[1];
         if($githuburl!=''){
-        echo $githuburl="https://github.com/".explode("\"",$githuburl)[0].',';
+        $data[$k]['githuburl']=$githuburl="https://github.com/".explode("\"",$githuburl)[0].',';
         }
     }
     
