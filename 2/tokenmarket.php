@@ -19,7 +19,7 @@ unset($tmp[0]);
         $tmp2=file_get_contents_https($url);
         $githuburl=explode("https://github.com/",$tmp2)[1];
         if($githuburl!=''){
-        echo $githuburl="https://github.com/".explode("\"",$githuburl)[0];
+        echo $githuburl="https://github.com/".explode("\"",$githuburl)[0].',';
         }
     }
     
