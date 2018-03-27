@@ -16,7 +16,7 @@ require_once dirname(__FILE__) . '/extension/PHPExcel/Classes/PHPExcel.php';
 // Create new PHPExcel object
 $objPHPExcel = new PHPExcel();
 $file_name='http://tokenworm-github.stor.sinaapp.com/upload/info.xls';
-$objPHPExcel=fopen($file_name,'r');
+$objPHPExcel=PHPExcel_IOFactory::load($file_name);
 
 // Set document properties
 $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
