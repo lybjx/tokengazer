@@ -31,15 +31,7 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $i++;
 }
 
-$ret = $kv->pkrget('', 100);
-while (true) {
-   var_dump($ret);
-   end($ret);
-   $start_key = key($ret);
-   $i = count($ret);
-   if ($i < 100) break;
-   $ret = $kv->pkrget('', 100, $start_key);
-}
+print_r($arr);
 // 初始化SaeKV对象
 //访问授权应用的数据
 
