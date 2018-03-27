@@ -1,6 +1,6 @@
 <?php
 include('bootstraps.php');
-
+ini_set('max_execution_time', '0');
 /*$url = 'https://icodrops.com/category/active-ico/';
 $content = file_get_contents_https($url);
 $str1 = trim(getSonString($content, "<h3 class=\"col-md-12 col-12 not_rated\">All</h3>", "<div class=\"tabs__content\">"));
