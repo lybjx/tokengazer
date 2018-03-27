@@ -10,12 +10,15 @@ $p='';
 $kv = new SaeKV();
 $ret = $kv->init("xowlw2kmk2");
 
-$url = 'https://coinmarketcap.com/all/views/all/';
+$url = 'https://coinmarketcap.com/'.$p;
+if($p==''){
+$p=1;
+}
 $content = file_get_contents_https($url);
 $content=getSonString($content,"<tbody>","</tbody>");
 $url1 = getSonStrings($content, '<span class="currency-symbol"><a href="','">');
 $githuburl=array();
-$i=1;
+$i=($p-1)*100;
 $arr=array();
 foreach($url1 as $k=>$v){
 $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
@@ -26,7 +29,11 @@ $contents1=file_get_contents_https("https://coinmarketcap.com".$url1[$k]);
     $kv->get('products:'.$i);
     $i++;
 }
-
+$page=$p+1;
+if($p==8){
+return false;
+}
+header("Location http://2.tokenworm.applinzi.com/coinmarketcap.php?p=".$page);
 // 初始化SaeKV对象
 //访问授权应用的数据
 
