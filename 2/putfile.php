@@ -50,7 +50,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 // Redirect output to a client’s web browser (Excel2007)
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-$objWriter->save('saestor://info.xls');
+$objWriter->save('saestor://tokenworm-github.stor.sinaapp.com/info.xls');
 exit;
 
 ?>
