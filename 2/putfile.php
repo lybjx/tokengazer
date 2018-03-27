@@ -48,7 +48,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 
 // Redirect output to a client’s web browser (Excel2007)
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-echo $objWriter->save('saestor://upload/info.xls';');
+echo $objWriter->save('saestor://upload/info.xls');
 exit;
 
 ?>
