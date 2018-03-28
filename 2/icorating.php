@@ -42,4 +42,5 @@ foreach($str2 as $k=>$v){
     } 
 }
 $kv->add('icoratingproducts',json_encode($arr,true));
-echo $kv->get('icoratingproducts');
+$s=$kv->get('icoratingproducts');
+print_r($s);
