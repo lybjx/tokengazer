@@ -5,7 +5,6 @@ $url = 'https://icorating.com/ico/?filter=all';
 $content = file_get_contents_https($url);
 $kv = new SaeKV();
 $ret = $kv->init("xowlw2kmk2");
-$tokenList = getToeknListFromDB();
 // echo json_encode($tokenList);
 //echo count($tokenList).'<br>';
 
