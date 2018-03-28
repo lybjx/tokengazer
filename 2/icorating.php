@@ -37,7 +37,9 @@ foreach($str2 as $k=>$v){
         $ret = $kv->delete('products:'.$i);
         $kv->add('products:'.$i, json_encode($arr[$i],true));
     
-    echo $kv->get('products:'.$i);
+     $kv->get('products:'.$i);
     
     } 
 }
+$kv->add('icoratingproducts',json_encode($arr,true));
+echo $kv->get('icoratingproducts');
