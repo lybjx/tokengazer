@@ -1,6 +1,5 @@
 <?php
 include('bootstraps.php');
-die;
 $url = 'https://icorating.com/ico/?filter=all';
 $content = file_get_contents_https($url);
 $kv = new SaeKV();
@@ -21,7 +20,7 @@ $str3 = getSonString($str3, '<tbody>', '</tbody>');
 array_push($str2,$str3);
 $i=0;
 print_r($str2);die;
-foreach($str2 as $k=>$v){
+/*foreach($str2 as $k=>$v){
     if($k==0||$k%2==0){
     $name=trim(explode("</td",$str2[$k])[0]);
         if(strstr($name,"'>"))
@@ -36,7 +35,7 @@ foreach($str2 as $k=>$v){
         $ret = $kv->delete('products:'.$i,);
         $kv->add('products:'.$i, json_encode($arr[$i],true));
     
-    echo $kv->get('products:'.$i);
+    //echo $kv->get('products:'.$i);
     
     } 
 }
