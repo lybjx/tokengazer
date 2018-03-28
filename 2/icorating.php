@@ -1,6 +1,6 @@
 <?php
 include('bootstraps.php');
-
+die;
 $url = 'https://icorating.com/ico/?filter=all';
 $content = file_get_contents_https($url);
 $kv = new SaeKV();
