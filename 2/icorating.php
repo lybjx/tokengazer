@@ -20,7 +20,7 @@ $str3 = getSonString($content, $head2, $end2);
 $str3 = getSonString($str3, '<tbody>', '</tbody>');
 array_push($str2,$str3);
 $i=0;
-//print_r($str2);die;
+print_r($str2);die;
 foreach($str2 as $k=>$v){
     if($k==0||$k%2==0){
     $name=trim(explode("</td",$str2[$k])[0]);
